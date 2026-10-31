@@ -3,203 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lugares de Huyuaia</title>
-    <meta name="description" content="Lugares de interés y atractivos turísticos de Huyuaia">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <title>Lugares turísticos - Huyuaia</title>
+    <meta name="description" content="Descubrí los principales lugares turísticos de Huyuaia.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="img/logo_agencia.jpg" type="image/x-icon">
+    <link rel="icon" href="IMG/logo_agencia.jpg" type="image/x-icon">
 </head>
-
 <body>
-
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-
                 <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                    <img src="IMG/logo_agencia.jpg" alt="Logo de la agencia de turismo fueguina" width="50" height="40" class="d-inline-block">
-                    <span class="h1 mb-0 fs-4">La Ciudad de los Sueños</span>
+                    <img src="IMG/logo_agencia.jpg" alt="Logo de la agencia de turismo fueguina" width="40" height="40">
+                    <span class="h1 mb-0 fs-4">Huyuaia - República Bengala</span>
                 </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir o cerrar el menú">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="ciudad.html">Ciudad</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="lugares.html">Lugares</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="lugares.html">Lugares</a></li>
                         <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
-
             </div>
         </nav>
-</header>
+    </header>
 
+    <main class="container my-4">
+        <section class="seccion-lugares">
+            <h2>Lugares para descubrir en Huyuaia</h2>
+            <p>Conocé algunos de los rincones más destacados de la ciudad, desde sus paisajes naturales hasta los sitios que conservan su historia.</p>
 
-<main class="container my-4">
+            <div id="carruselLugares" class="carousel slide" data-bs-ride="false" aria-label="Carrusel de lugares turísticos de Huyuaia">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carruselLugares" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Mostrar Faro del Sueño"></button>
+                    <button type="button" data-bs-target="#carruselLugares" data-bs-slide-to="1" aria-label="Mostrar Laguna Luna"></button>
+                    <button type="button" data-bs-target="#carruselLugares" data-bs-slide-to="2" aria-label="Mostrar Museo Presidio de las Pesadillas"></button>
+                    <button type="button" data-bs-target="#carruselLugares" data-bs-slide-to="3" aria-label="Mostrar Plaza de los Sueños"></button>
+                    <button type="button" data-bs-target="#carruselLugares" data-bs-slide-to="4" aria-label="Mostrar mapa de Huyuaia"></button>
+                </div>
 
-    <h2>Lugares de interés</h2>
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="IMG/faro.jpg" class="card-img-top lugar-imagen" alt="Faro junto al mar y paisaje costero">
+                            <div class="card-body p-5 text-center">
+                                <span class="badge text-bg-info mb-3">Paisaje costero</span>
+                                <h3 class="card-title">Faro del Sueño</h3>
+                                <p class="card-text">El Faro del Sueño se encuentra frente a la costa, rodeado por el canal y las montañas. Desde allí se obtiene una vista panorámica y se puede conocer parte de la historia marítima de Huyuaia.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="IMG/laguna_luna.jpg" class="card-img-top lugar-imagen" alt="Laguna rodeada de montañas y vegetación">
+                            <div class="card-body p-5 text-center">
+                                <span class="badge text-bg-info mb-3">Naturaleza</span>
+                                <h3 class="card-title">Laguna Luna</h3>
+                                <p class="card-text">La Laguna Luna está rodeada de bosques y montañas. Sus senderos permiten recorrer la naturaleza y disfrutar de un ambiente tranquilo en cualquier estación del año.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="IMG/Museo_1.jpg" class="card-img-top lugar-imagen" alt="Edificio histórico de arquitectura clásica">
+                            <div class="card-body p-5 text-center">
+                                <span class="badge text-bg-info mb-3">Historia local</span>
+                                <h3 class="card-title">Museo Presidio de las Pesadillas</h3>
+                                <p class="card-text">Este espacio histórico conserva relatos, objetos y costumbres de otras épocas. Sus salas ayudan a comprender la historia de los primeros habitantes y el crecimiento de Huyuaia.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="IMG/plaza_malvinas_argentinas.jpg" class="card-img-top lugar-imagen" alt="Espacio verde y sendero en una plaza">
+                            <div class="card-body p-5 text-center">
+                                <span class="badge text-bg-info mb-3">Punto de encuentro</span>
+                                <h3 class="card-title">Plaza de los Sueños</h3>
+                                <p class="card-text">La Plaza de los Sueños es un punto de encuentro para vecinos y visitantes. Sus espacios abiertos son ideales para descansar, pasear y participar de actividades comunitarias.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="IMG/Mapa_Huyuaia.png" class="card-img-top lugar-imagen" alt="Mapa de ubicación de Huyuaia">
+                            <div class="card-body p-5 text-center">
+                                <span class="badge text-bg-info mb-3">Ubicación</span>
+                                <h3 class="card-title">Mapa de Huyuaia</h3>
+                                <p class="card-text">Consultá el mapa para ubicar la ciudad y orientarte antes de comenzar el recorrido por sus principales lugares turísticos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <p>
-        Huyuaia cuenta con diferentes <strong>atractivos naturales y culturales</strong>
-        que pueden visitarse durante todo el año. A continuación,
-        presentamos algunos de los lugares más conocidos de la ciudad.
-        Cada uno de ellos ofrece una experiencia única y permite conocer
-        distintos aspectos de la historia y cultura local. 
-    </p>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselLugares" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselLugares" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
 
+        <section>
+            <h2>Planificá tu visita</h2>
+            <p>Combiná los paseos por la naturaleza con visitas a los espacios históricos para conocer mejor los paisajes y las tradiciones de Huyuaia.</p>
+            <a class="btn btn-outline-primary" href="ciudad.html">Conocé la historia de Huyuaia</a>
+            <a class="btn btn-primary" href="contacto.html">Contactá a la Oficina de Turismo</a>
+        </section>
+    </main>
 
-    <section id=lugares_turisticos>
-
-        <article>
-
-            <h3>El Faro del Sueño</h3>
-            <img src="IMG/faro.jpg" width="300" height="200" alt="Faro del Sueño de Huyuaia"><br>
-            <p>
-                El <strong>Faro del Sueño</strong> es uno de los lugares
-                más representativos de Huyuaia. Se encuentra en la zona
-                costera y durante muchos años fue utilizado como punto
-                de orientación para las embarcaciones.
-            </p>
-
-            <p>
-                Desde sus alrededores se puede observar gran parte de la
-                costa y las montañas. Es posible realizar recorridos
-                guiados y sacar fotografías del paisaje.
-            </p>
-
-            <p>
-                <mark>Se recomienda visitarlo al atardecer</mark>, cuando
-                las luces de la ciudad comienzan a reflejarse sobre el
-                agua.
-            </p>
-
-        </article>
-
-
-        <article>
-
-            <h3>Laguna Luna</h3>
-            <img src="IMG/laguna_luna.jpg" width="300" height="200" alt="Laguna Luna de Huyuaia"><br>
-            <p>
-                La <strong>Laguna Luna</strong> se encuentra en una zona
-                boscosa al sur de la ciudad. Es conocida por sus aguas
-                tranquilas y por los paisajes que la rodean.
-            </p>
-
-            <p>
-                En el lugar se pueden realizar caminatas, observar aves
-                y recorrer los senderos cercanos. También es un sitio
-                bastante visitado para realizar fotografías.
-            </p>
-
-            <p>
-                Es una buena opción para quienes buscan un lugar
-                <i>tranquilo y alejado del centro</i>.
-            </p>
-
-        </article>
-
-
-        <article>
-
-            <h3>Museo Presidio de las Pesadillas</h3>
-            <img src="IMG/Museo_1.jpg" width="300" height="200" alt="Museo Presidio de las Pesadillas de Huyuaia"><br>
-            <p>
-                El <strong>Museo Presidio de las Pesadillas</strong> es
-                uno de los principales espacios históricos de Huyuaia.
-                El edificio conserva parte de la estructura utilizada
-                antiguamente como prisión.
-            </p>
-
-            <p>
-                En su interior se pueden conocer objetos, relatos y
-                diferentes aspectos de la historia de los primeros
-                habitantes de la ciudad.
-            </p>
-
-            <p>
-                Se recomienda visitarlo para conocer una parte importante
-                de la <strong>historia y cultura huyueiña</strong>.
-            </p>
-
-        </article>
-
-
-        <article>
-
-            <h3>Plaza Islas Malvinas</h3>
-            <img src="IMG/plaza_malvinas_argentinas.jpg" width="300" height="200"  alt="Plaza Islas Malvinas de Huyuaia"><br>
-            <p>
-                La <strong>Plaza Islas Malvinas</strong> se encuentra en
-                el centro de Huyuaia y es uno de los espacios historicos mas
-                importantes de la ciudad. 
-            </p>
-
-            <p>
-                Se realizan distintas actividades educativas y culturales vinculadas
-                con la historia de la ciudad y con el rol que tuvo durante
-                <strong>la Guerra de Malvinas</strong>.
-            </p>
-
-            <p>
-                Durante el <strong>Festival de la Nieve</strong> la plaza
-                se convierte en uno de los lugares principales para las
-                actividades culturales.
-            </p>
-
-        </article>
-
-    </section>
-
-
-    <aside>
-
-        <h3>¿Sabías que?</h3>
-
-        <p>
-            Muchos de los lugares turísticos de Huyuaia se encuentran
-            cerca de zonas naturales, por lo que es posible conocer
-            distintos paisajes durante un mismo recorrido.
-        </p>
-
-    </aside>
-
-
-    <section>
-
-        <h2>Actividades relacionadas</h2>
-
-        <p>
-            Además de conocer los lugares de interés, los visitantes
-            pueden participar de distintas actividades organizadas
-            durante el año.
-        </p>
-
-        <ul>
-            <li>Recorridos guiados por la ciudad.</li>
-            <li>Caminatas por los bosques.</li>
-            <li>Ferias de artesanos.</li>
-            <li>Visitas a museos y centros culturales.</li>
-            <li>Actividades del Festival de la Nieve.</li>
-        </ul>
-
-    </section>
-
-</main>
-
-
-<footer>
-
-    <address>
-        Sitio desarrollado por:
-        <a href="mailto:mi.mar@dev.com">mi.mar@dev.com</a>
-    </address>
-
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <footer>
+        <address>Sitio desarrollado por: <a href="mailto:mi.mar@dev.com">mi.mar@dev.com</a></address>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
