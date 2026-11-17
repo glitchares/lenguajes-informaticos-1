@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huyuaia - La Ciudad de los Sueños</title>
     <meta name="description" content="Información turística sobre Huyuaia">
-    <link rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> 
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/logo_agencia.jpg" type="image/x-icon">
@@ -73,46 +72,65 @@
         </section>
 
 
-        <section>
+        <section class="seccion-lugares">
 
             <h2>Lugares destacados</h2>
 
-            <article>
-                <h3>Faro del Sueño</h3>
-                <p>
-                    El Faro del Sueño es uno de los principales símbolos de Huyuaia y uno de los lugares 
-                    más reconocidos por sus habitantes. Se encuentra frente a la costa, rodeado por las 
-                    aguas del canal y las montañas que caracterizan a la ciudad.<br>
-                    Desde sus alrededores se puede obtener una vista panorámica de Huyuaia y disfrutar del paisaje fueguino. 
-                    demás, forma parte de la historia marítima de la ciudad y es un punto muy visitado
-                    por turistas.
-                </p>
-            </article>
-
-            <article>
-                <h3>Laguna Luna</h3>
-                <p>
-                   La Laguna Luna es uno de los principales atractivos naturales de Huyuaia. 
-                   Se encuentra rodeada de bosques y montañas, formando un paisaje tranquilo que cambia 
-                   según la estación del año.<br>
-                   Sus alrededores cuentan con senderos que permiten recorrer la zona y apreciar la naturaleza.
-                   Es un lugar muy elegido por quienes buscan alejarse del movimiento de la ciudad y disfrutar de un ambiente más tranquilo.
-                </p>
-            </article>
-
-            <article>
-                <h3>Museo Presidio de las Pesadillas</h3>
-                <p>
-                    El Museo Presidio de las Pesadillas es uno de los espacios históricos más importantes de Huyuaia. 
-                    El edificio conserva parte de la historia de los primeros habitantes y de las antiguas instituciones de la ciudad.<br>
-                    En sus salas se pueden conocer objetos, relatos y costumbres de otras épocas, permitiendo comprender
-                    mejor cómo fue creciendo Huyuaia a lo largo de los años. Es una visita recomendada para quienes 
-                    tengan interés en la historia y cultura huyueiña.
-                </p>
-            </article>
+            <div class="container-fluid px-0">
+                <div class="row g-3">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="accordion" id="accordionFaro">
+                            <div class="accordion-item h-100">
+                                <h3 class="accordion-header" id="headingFaro">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaro" aria-expanded="false" aria-controls="collapseFaro">
+                                        Faro del Sueño
+                                    </button>
+                                </h3>
+                                <div id="collapseFaro" class="accordion-collapse collapse" aria-labelledby="headingFaro" data-bs-parent="#accordionFaro">
+                                    <div class="accordion-body">
+                                        El Faro del Sueño es uno de los principales símbolos de Huyuaia. Está frente a la costa, rodeado por el canal y las montañas. Desde allí se obtiene una vista panorámica y se conoce parte de la historia marítima de la ciudad.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="accordion" id="accordionLaguna">
+                            <div class="accordion-item h-100">
+                                <h3 class="accordion-header" id="headingLaguna">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLaguna" aria-expanded="false" aria-controls="collapseLaguna">
+                                        Laguna Luna
+                                    </button>
+                                </h3>
+                                <div id="collapseLaguna" class="accordion-collapse collapse" aria-labelledby="headingLaguna" data-bs-parent="#accordionLaguna">
+                                    <div class="accordion-body">
+                                        La Laguna Luna está rodeada de bosques y montañas. Sus senderos permiten recorrer la naturaleza y disfrutar de un ambiente tranquilo en cualquier estación del año.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="accordion" id="accordionMuseo">
+                            <div class="accordion-item h-100">
+                                <h3 class="accordion-header" id="headingMuseo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMuseo" aria-expanded="false" aria-controls="collapseMuseo">
+                                        Museo Presidio de las Pesadillas
+                                    </button>
+                                </h3>
+                                <div id="collapseMuseo" class="accordion-collapse collapse" aria-labelledby="headingMuseo" data-bs-parent="#accordionMuseo">
+                                    <div class="accordion-body">
+                                        Este espacio histórico conserva parte de la historia de los primeros habitantes. Sus salas muestran objetos, relatos y costumbres de otras épocas, ayudando a comprender el crecimiento de Huyuaia.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <p>
-                <a href="lugares.html"><strong>Ver todos los lugares</strong></a>
+                <a class="btn btn-primary" href="lugares.html">Ver todos los lugares</a>
             </p>
 
         </section>
@@ -138,7 +156,7 @@
 
             <aside>
 
-                <h3>Dato interesante</h3>
+                <h3>Dato interesante <span class="badge text-bg-info">Imperdible</span></h3>
 
                 <p>
                     El <strong>Festival de la Nieve</strong> se realiza
@@ -163,15 +181,15 @@
             </p>
 
             <p>
-                <a href="ciudad.html">Conocé la historia de Huyuaia</a>
+                <a class="btn btn-outline-primary" href="ciudad.html">Conocé la historia de Huyuaia</a>
             </p>
 
             <p>
-                <a href="lugares.html">Explorá nuestros lugares</a>
+                <a class="btn btn-outline-primary" href="lugares.html">Explorá nuestros lugares</a>
             </p>
 
             <p>
-                <a href="contacto.html">Contactá a la Oficina de Turismo</a>
+                <a class="btn btn-outline-primary" href="contacto.html">Contactá a la Oficina de Turismo</a>
             </p>
 
         </section>
