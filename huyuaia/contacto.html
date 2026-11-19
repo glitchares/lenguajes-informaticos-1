@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
             content="width=device-width, initial-scale=1.0">
     <title>Agencia Fueguina Huyuaia</title> 
     <meta name="description" content="Contacto de la agencia fueguina">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> 
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,10 +14,9 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-
                 <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                    <img src="img/logo_agencia.jpg" alt="Logo de la agencia de turismo fueguina" width="50" height="40" class="d-inline-block">
-                    <span class="h1 mb-0 fs-4">Contacto</span>
+                    <img src="IMG/logo_agencia.jpg" alt="Logo de la agencia de turismo fueguina" width="40" height="40" class="d-inline-block">
+                    <span class="h1 mb-0 fs-4">Huyuaia - Republica Bengala</span>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,14 +24,24 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="ciudad.html">Ciudad</a></li>
-                        <li class="nav-item"><a class="nav-link" href="lugares.html">Lugares</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ciudad.html">Ciudad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="lugares.html">Lugares</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <button id="btn-modo" type="button" class="btn btn-outline-light btn-sm">Modo oscuro</button>
+                        </li>
                     </ul>
                 </div>
-
             </div>
         </nav>
     </header>
@@ -41,7 +50,7 @@
         <section id="formulario">
             <h1> Sé Parte </h1>
             <p>Tenemos propuestas de voluntariado para la mantención de nuestra Huyuaia querida. Desde limpieza de sus calles hasta el cuidado de fauna autóctona.</p>
-            
+
             <form  id="form-contacto" novalidate>
             
             <div class="mb-3">
@@ -77,11 +86,11 @@
             <fieldset class="mb-3">
                 <legend class="fs-6">Disponibilidad</legend>
                 <div class="form-check">    
-                    <input type="radio" class="form-check-input" name="disponibilidad" id="disp-completo" value="completo"required>
+                    <input type="radio" class="form-check-input" name="disponibilidad" id="disp-completo" value="completo" required>
                     <label for="disp-completo">Tiempo completo</label>
                 </div>
                 <div class="form-check">
-                     <input type="radio" class="form-check-input" name="disponibilidad" id="disp-parcial" value="parcial"required>
+                     <input type="radio" class="form-check-input" name="disponibilidad" id="disp-parcial" value="parcial" required>
                     <label for="disp-parcial">Medio tiempo</label>
                 </div>
             </fieldset>
@@ -102,8 +111,8 @@
             </form>
             <small> *Los datos ingresados en este formulario son recopilados estrictamente por la agencia turística, fuera del alcance de terceros.</small>
         </section>
+    
     </main>
-    <!--nombre, email, telefono, fecha de nacimiento, programa de interes, disponibilidad, experiencia previa, mensaje libre, boton de envio-->
     <footer>
         <address>
             <hr>
@@ -119,7 +128,7 @@
            <a href="mailto:mi.mar@dev.com">mi.mar@dev.com</a>            
         </address>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body> 
 </html>

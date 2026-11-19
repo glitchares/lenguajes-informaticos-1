@@ -105,3 +105,47 @@ footer a { color: #fff; }
 .btn-primary:hover { background-color: #203b56; border-color: #203b56; }
 .btn-outline-primary { color: var(--primary-color); border-color: var(--primary-color); }
 .btn-outline-primary:hover { background-color: var(--primary-color); border-color: var(--primary-color); }
+
+/* =====================================================
+   MODO OSCURO
+   Se activa cuando <html> tiene data-bs-theme="dark".
+   Ese atributo lo cambia js/main.js al apretar el boton.
+   Bootstrap 5.3 cambia solo sus propios colores; estas
+   reglas cubren los colores que definimos nosotros arriba.
+   ===================================================== */
+[data-bs-theme="dark"] body {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+[data-bs-theme="dark"] h2,
+[data-bs-theme="dark"] h3 {
+    color: #9ec5fe;
+}
+
+[data-bs-theme="dark"] figure {
+    color: #adb5bd;
+}
+
+[data-bs-theme="dark"] aside {
+    background-color: #2b3035;
+    border-left-color: #9ec5fe;
+}
+
+[data-bs-theme="dark"] .accordion-button {
+    color: #9ec5fe;
+}
+
+[data-bs-theme="dark"] .accordion-button:not(.collapsed) {
+    color: #9ec5fe;
+    background-color: #343a40;
+}
+
+[data-bs-theme="dark"] .btn-outline-primary {
+    color: #9ec5fe;
+    border-color: #9ec5fe;
+}
+
+[data-bs-theme="dark"] .btn-outline-primary:hover {
+    color: #fff;
+}
