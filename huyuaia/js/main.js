@@ -1,64 +1,120 @@
-//index.html
+// =====================================================
+// 1) MODO OSCURO / MODO CLARO
+// Bootstrap 5.3 cambia los colores segun el atributo
+// data-bs-theme de la etiqueta <html> ("light" u "dark").
+// =====================================================
+const html = document.documentElement;
+const botonModo = document.getElementById("btn-modo");
 
-//ciudad.html
+function aplicarTema(tema) {
+    html.setAttribute("data-bs-theme", tema);
 
-//lugares.html
+    if (tema === "dark") {
+        botonModo.textContent = "Modo claro";
+    } else {
+        botonModo.textContent = "Modo oscuro";
+    }
+}
 
-//contacto.html
-const formContacto = document.getElementById("form-contacto");
+if (botonModo) {
+    // Si el usuario ya eligio un tema antes, se vuelve a usar
+    const temaGuardado = localStorage.getItem("tema");
+    if (temaGuardado) {
+        aplicarTema(temaGuardado);
+    }
 
-if(formContacto){
-    const resultado = document.getElementById("resultado");
-
-
-    const mostrarMensaje = (texto, tipo) => {
-        resultado.textContent = texto;
-
-        resultado.classList.remove("alert", "alert-danger", "alert-success");
-
-        resultado.classList.add("alert");
-        
-        if(tipo == "error"){
-            resultado.classList.add("alert-danger");    
-        }else{
-            resultado.classList.add("alert-success");
+    botonModo.addEventListener("click", function () {
+        let nuevoTema = "dark";
+        if (html.getAttribute("data-bs-theme") === "dark") {
+            nuevoTema = "light";
         }
-    };
+        aplicarTema(nuevoTema);
+        localStorage.setItem("tema", nuevoTema);
+    });
+}
 
-    formContacto.addEventListener("submit", (e) => {
-    e.preventDefault();
+
+// =====================================================
+// 2) ACORDEON: boton "Abrir todas / Cerrar todas"
+// Cada pregunta se abre y cierra con Bootstrap.
+// Este boton usa la clase Collapse de Bootstrap desde JS.
+// =====================================================
+const botonFaq = document.getElementById("btn-toggle-faq");
+const paneles = document.querySelectorAll("#accordionFaq .accordion-collapse");
+let todasAbiertas = false;
+
+if (botonFaq) {
+    botonFaq.addEventListener("click", function () {
+        todasAbiertas = !todasAbiertas;
+
+        paneles.forEach(function (panel) {
+            const collapse = bootstrap.Collapse.getOrCreateInstance(panel, { toggle: false });
+            if (todasAbiertas) {
+                collapse.show();
+            } else {
+                collapse.hide();
+            }
+        });
+
+        if (todasAbiertas) {
+            botonFaq.textContent = "Cerrar todas";
+        } else {
+            botonFaq.textContent = "Abrir todas";
+        }
+    });
+}
+
+
+// =====================================================
+// 3) VALIDACION DEL FORMULARIO DE CONTACTO
+// Solo se usa en contacto.html. Si falta algun campo
+// obligatorio muestra un error, si no muestra exito.
+// =====================================================
+const formulario = document.getElementById("form-contacto");
+const resultado = document.getElementById("resultado");
+
+if (formulario) {
+    formulario.addEventListener("submit", function (evento) {
+        // Evita que la pagina se recargue
+        evento.preventDefault();
 
         const nombre = document.getElementById("nombre").value.trim();
         const email = document.getElementById("email").value.trim();
         const telefono = document.getElementById("telefono").value.trim();
         const fecha = document.getElementById("fecha_nacimiento").value;
-        const programa = document.getElementById("programa").value
+        const programa = document.getElementById("programa").value;
+        const disponibilidad = document.querySelector('input[name="disponibilidad"]:checked');
 
-        const disponibilidad = document.querySelector('input[name="disponibilidad"]:checked')
+        const faltantes = [];
 
-        if(nombre === "" || email === "" || fecha === ""){
-            mostrarMensaje("Completá todos los campos obligatorios.", "error");
-            return;
+        if (nombre === "") {
+            faltantes.push("Nombre completo");
+        }
+        if (email === "") {
+            faltantes.push("Correo electrónico");
+        } else if (!email.includes("@")) {
+            faltantes.push("Correo electrónico válido");
+        }
+        if (telefono === "") {
+            faltantes.push("Teléfono");
+        }
+        if (fecha === "") {
+            faltantes.push("Fecha de nacimiento");
+        }
+        if (programa === "") {
+            faltantes.push("Programa de interés");
+        }
+        if (disponibilidad === null) {
+            faltantes.push("Disponibilidad");
         }
 
-        if(programa == ""){
-            mostrarMensaje("Elegí un programa de interés.", "error");
-            return;
+        if (faltantes.length > 0) {
+            resultado.innerHTML =
+                '<div class="alert alert-danger">Revisá estos campos: ' + faltantes.join(", ") + ".</div>";
+        } else {
+            resultado.innerHTML =
+                '<div class="alert alert-success">¡Gracias, ' + nombre + "! Recibimos tu formulario.</div>";
+            formulario.reset();
         }
-
-        if (disponibilidad === null){
-            mostrarMensaje("Elegí tu disponibilidad", "error");
-            return;
-        }
-
-        if(!email.includes("@") || !email.includes(".")){
-            mostrarMensaje("Ingresá un correo electrónico válido.", "error")
-            return;
-    }
-
-    mostrarMensaje("Gracias por ser parte! Recibimos tus datos.", "exito");
-   formContacto.reset();
-
-});
-    
+    });
 }
